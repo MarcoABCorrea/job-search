@@ -1,9 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc", 
-    "baseUrl": "src",
-    "sourceMap": true,    
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -16,11 +16,7 @@
       "es2017",
       "dom"
     ],
-    "paths": {
-      "@stomp/ng2-stompjs": [
-        "../node_modules/@stomp/ng2-stompjs"
-      ]
-    }
+    "module": "es2015",
+    "baseUrl": "./"
   }
-  
 }
