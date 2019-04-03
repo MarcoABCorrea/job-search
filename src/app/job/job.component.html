@@ -1,0 +1,64 @@
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="page-header">
+				<div class="row">
+					<div class="col-lg-1">
+						<a [routerLink]="''" class="btn btn-default btn-sm">«Back</a>
+					</div>
+					<div class="col-lg-11">
+						<h1>
+							<b>
+								{{job?.title}}
+							</b>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-lg-12">
+						<h5 class="panel-title">Info</h5>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+          <div class="col-lg-4">
+              <img [src]="job?.thumbnail" class="img-responsive profile-image">
+          </div>
+					<div class="col-lg-4">
+						<div class="alert alert-warning">
+							<fieldset>
+								<h4>
+									<b>
+										ADDRESS
+									</b>
+								</h4>
+								<hr>
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>
+											<b>City:</b>
+											{{job?.city || 'n/a'}}
+										</h5>
+									</div>
+									<div class="col-lg-12">
+										<h5>
+											<b>Zip Code: </b>
+											{{job?.zip_code || 'n/a'}}
+										</h5>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

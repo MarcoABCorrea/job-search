@@ -11,12 +11,16 @@ div.table-wrapper {
 		border-bottom: 0;
 	}
 
+	tr:hover {
+		cursor: pointer;
+	}
+
 	tr.even {
 		background-color: white;
 	}
 
 	tr.odd {
-		background-color: #c6ebf994;
+		background-color: #24f74094;
 	}
 
 	tbody tr:last-child {
@@ -31,11 +35,6 @@ div.table-wrapper {
 
 	tbody {
 		display: block;
-	}
-
-	.table-wrapper-header {
-		background-color: #8a8a8a;
-		color: white;
 	}
 
 	.table-wrapper-footer {
@@ -74,11 +73,11 @@ div.table-wrapper {
 
 			a {
 				cursor: pointer;
-				color: #057cb5;
+				color: #1a990a;
 			}
 
 			.active a {
-				background-color: #057cb5;
+				background-color: #1a990a;
 				color: white;
 				font-weight: bold;
 			}

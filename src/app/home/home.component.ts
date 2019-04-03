@@ -29,7 +29,12 @@ export class HomeComponent {
 				this.jobs = result.body as Array<Job>;
         this.config.totalItems = this.jobs.length;
     	});
-  }
+	}
+	
+	open(jobId: number) {
+		let tt = this.jobs.find(x => x.id === jobId);
+		console.log('teste', tt)
+	}
 
 	sortJob(fieldname, order) {
 		this.fieldname = fieldname;
