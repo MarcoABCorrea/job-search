@@ -28,9 +28,41 @@
 			</div>
 			<div class="panel-body">
 				<div class="row">
-          <div class="col-lg-4">
-              <img [src]="job?.thumbnail" class="img-responsive profile-image">
-          </div>
+					<div class="col-lg-2 text-center" *ngIf="job?.thumbnail">
+						<img [src]="job?.thumbnail" class="img-responsive profile-image">
+					</div>
+					<div class="col-lg-6">
+						<div class="alert alert-warning">
+							<fieldset>
+								<h4>
+									<b>
+										DETAILS
+									</b>
+								</h4>
+								<hr>
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>
+											<b>Description:</b>
+											{{job?.description || 'n/a'}}
+										</h5>
+									</div>
+									<div class="col-lg-12">
+										<h5>
+											<b>Created at: </b>
+											{{job?.created_at | date:'dd/MM/yyyy' || 'n/a'}}
+										</h5>
+									</div>											
+									<div class="col-lg-12">
+										<h5>
+											<b>End date: </b>
+											{{job?.end_date | date:'dd/MM/yyyy' || 'n/a'}}
+										</h5>
+									</div>									
+								</div>
+							</fieldset>
+						</div>
+					</div>
 					<div class="col-lg-4">
 						<div class="alert alert-warning">
 							<fieldset>
@@ -56,7 +88,16 @@
 								</div>
 							</fieldset>
 						</div>
-          </div>
+					</div>
+				</div>
+				<div class="row padding-top" *ngIf="job?.attachments?.length !== 0">
+					<div class="card col-lg-10 offset-lg-1">
+						<div class="card-body">
+							<h5 class="card-title">Attachments</h5>
+							<img *ngFor="let attachment of job?.attachments" 
+								[src]="attachment" class="img-fluid img-padding">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

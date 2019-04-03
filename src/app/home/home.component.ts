@@ -26,14 +26,10 @@ export class HomeComponent {
 
 		this.jobsService.getAllJobs().subscribe(
 			result => {
-				this.jobs = result.body as Array<Job>;
+				const resultFormatted = result.body as Array<Job>;
+				this.jobs = resultFormatted.filter(obj => obj.state === "active");
         this.config.totalItems = this.jobs.length;
     	});
-	}
-	
-	open(jobId: number) {
-		let tt = this.jobs.find(x => x.id === jobId);
-		console.log('teste', tt)
 	}
 
 	sortJob(fieldname, order) {

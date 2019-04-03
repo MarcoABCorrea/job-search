@@ -9,7 +9,7 @@ const routes: Routes = [
 	{path: '', component: HomeComponent},
 	{path: 'job/:jobId', component: JobComponent},
 	{path: 'not-found', component: NotFoundComponent},
-	{ path: '**', redirectTo: '/not-found', }
+	{path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({

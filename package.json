@@ -2,6 +2,8 @@
   "name": "job-search",
   "version": "1.0.0",
   "license": "MIT",
+  "description": "Job search application",
+  "author": "Marco Aurélio Batista Corrêa",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
