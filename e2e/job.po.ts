@@ -1,11 +1,11 @@
 import { browser, element, by } from 'protractor';
 
-export class DigideskUiPage {
+export class JobPage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/job/98969442');
   }
 
-  getParagraphText() {
+  getPageTitle() {
     return element(by.css('app-root h1')).getText();
   }
 }
