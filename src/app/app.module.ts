@@ -1,32 +1,41 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
+/* App Root */
+import { AppComponent } from './app-root/app.component';
+/* App Navigation */
+import { AppRoutingModule } from './app-routing/app-routing.module';
+/* Feature Modules */
+import { CoreModule } from './core/core.module';
 import { JobComponent } from './job/job.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		NotFoundComponent,
-		HomeComponent,
-		JobComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		FormsModule,
-		HttpClientModule,
-		BrowserAnimationsModule,
-		NgxPaginationModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    JobComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    CoreModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
+  exports: [
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
+  providers: [],  
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

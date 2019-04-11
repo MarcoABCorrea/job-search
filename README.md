@@ -5,11 +5,8 @@ This App emulates a job search site.
 ## Stack & Components
 
 * Angular 7
-* Bootstrap 4
-* SASS
-* Font-Awesome
-* lodash
-* ngx-pagination
+* Angular Material
+* Flex Layout
 
 ## Setup
 
@@ -37,7 +34,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## TODO
-
-* Change to angular material

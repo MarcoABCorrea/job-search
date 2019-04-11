@@ -4,6 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-	production: false,
-	api: 'http://localhost:8080/api/player'
+  production: false,
+  rootUrl: 'http://127.0.0.1:8080',
+  wsUrl: 'ws://127.0.0.1:8080/websocket-connect'
 };

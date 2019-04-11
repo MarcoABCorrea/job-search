@@ -3,6 +3,7 @@
   "compilerOptions": {
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -16,7 +17,11 @@
       "es2017",
       "dom"
     ],
-    "module": "es2015",
-    "baseUrl": "./"
+    "paths": {
+      "@stomp/ng2-stompjs": [
+        "../node_modules/@stomp/ng2-stompjs"
+      ]
+    },
+    "module": "es2015"
   }
 }
