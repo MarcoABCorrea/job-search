@@ -22,7 +22,6 @@ import { JobComponent } from './job/job.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
