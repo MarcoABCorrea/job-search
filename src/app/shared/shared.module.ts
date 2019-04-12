@@ -9,8 +9,6 @@ import { NavBarService } from './nav-bar.service';
     CommonModule,
     RouterModule
   ],
-  declarations: [
-  ],
   exports: [
     RouterModule,
     CommonModule,

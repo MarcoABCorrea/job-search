@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { AppRoutes } from 'app/shared/constants';
 
 @Component({
   selector: 'dd-not-found',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  homeUrl:string = `/${AppRoutes.HOME}`;
+
+  constructor(private location: Location) { }
 
   ngOnInit() {
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

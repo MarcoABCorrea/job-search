@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* App Root */
@@ -21,21 +20,9 @@ import { JobComponent } from './job/job.component';
     BrowserAnimationsModule,
     CoreModule,
     AppRoutingModule,
-    HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule
+    HttpClientModule
   ],
-  exports: [
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
-  providers: [],  
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
