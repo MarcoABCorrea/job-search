@@ -8,12 +8,14 @@ import { AppComponent } from './app-root/app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
-import { JobComponent } from './job/job.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { JobDetailComponent } from './job-detail/job-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobComponent
+    JobsComponent,
+    JobDetailComponent
   ],
   imports: [
     BrowserModule,

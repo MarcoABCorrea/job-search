@@ -9,7 +9,7 @@ import { AppRoutes } from 'app/shared/constants';
 export class SidenavComponent {
 
   homeUrl = `/${AppRoutes.HOME}`;
-  jobUrl = `/${AppRoutes.JOB}`;
+  jobsUrl = `/${AppRoutes.JOBS}`;
 
   constructor() {
   }

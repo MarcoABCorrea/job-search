@@ -1,15 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Router } from '@angular/router';
 import { Job } from 'app/models/job.model';
 import { JobsService } from 'app/services/jobs.service';
 
 @Component({
-  selector: 'dd-job',
-  templateUrl: './job.component.html',
-  styleUrls: ['./job.component.scss'],
+  selector: 'dd-jobs',
+  templateUrl: './jobs.component.html',
+  styleUrls: ['./jobs.component.scss'],
   providers: [JobsService]
 })
-export class JobComponent implements OnInit {
+export class JobsComponent implements OnInit {
 
   jobs: Array<Job>;
   displayedColumns: string[] = ['title', 'city'];
@@ -21,7 +22,7 @@ export class JobComponent implements OnInit {
   ngOnInit() {
   }
 
-  constructor(private jobsService: JobsService) {
+  constructor(private jobsService: JobsService, private router: Router) {
     this.jobsService.getAllJobs().subscribe(
 			result => {
 				const resultFormatted = result.body as Array<Job>;
@@ -36,8 +37,7 @@ export class JobComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  getRecord(row) {
-    console.log('tomaonocu');
-    // this.router.navigate(['/participants', product]);
+  goToDetails(row) {
+    this.router.navigate(['/job/detail', row.id]);
   }
 }
