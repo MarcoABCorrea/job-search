@@ -9,8 +9,9 @@ const routes: Routes = [
   { path: '', redirectTo: AppRoutes.HOME, pathMatch: 'full' },
 	{ path: AppRoutes.HOME, component: HomeComponent },
   { path: AppRoutes.JOB, component: JobComponent },
-  { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: '/not-found' }
+  { path: AppRoutes.JOB_DETAIL, component: JobComponent },
+  { path: 'not-found', component: NotFoundComponent }
+  // { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
