@@ -2,6 +2,8 @@
 
 This App emulates a job search site.
 
+WIP! Currently working on branch [`refactor`](https://github.com/MarcoABCorrea/job-search/tree/refactor) on a Flex-Layout / Angular Material solution.
+
 ## Stack & Components
 
 * Angular 7
